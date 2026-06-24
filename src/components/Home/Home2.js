@@ -10,10 +10,10 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              LET ME <span className="cyan"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
+              I’m a Platform Engineer who loves transforming ideas into
               reliable, scalable products. Over time, I’ve explored several
               technologies and found my passion in building high-performance
               systems and intuitive user experiences.
@@ -21,9 +21,9 @@ function Home2() {
               <br />
               I’m proficient in
               <i>
-                <b className="purple">
+                <b className="cyan">
                   {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
+                  JavaScript, Typescript, Node.js, Python{" "}
                 </b>
               </i>
               — and I enjoy working across both backend and frontend stacks.
@@ -31,19 +31,19 @@ function Home2() {
               <br />
               My key areas of interest include developing
               <i>
-                <b className="purple">
+                <b className="cyan">
                   {" "}
-                  Web Applications, Blockchain Solutions,{" "}
+                  Web Applications, Mobile Applications, Backend systems, Cloud systems and DevOps{" "}
                 </b>
               </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
+              and exploring new ways to optimize and improve development and deployment processes.
               <br />
               <br />
               Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
+              <b className="cyan"> Node.js </b> and modern frameworks like{" "}
               <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
+                <b className="cyan">React.js</b> and{" "}
+                <b className="cyan">Next.js</b>.
               </i>
             </p>
           </Col>
