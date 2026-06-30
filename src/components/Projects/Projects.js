@@ -23,23 +23,12 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="AskMakChatbot"
+              description="A full-stack chatbot application that allows users to sign up, log in, and engage in real-time conversations with an AI assistant. The system features secure authentication, message history, role-based chat interactions, and a clean, responsive user interface. Built with modern web technologies, AskMakChatbot provides an efficient and interactive platform for AI-assisted communication."
+              ghLink="https://github.com/chunky152/askmakchatbot.git"
+              demoLink="http://147.224.178.246/"
             />
           </Col>
 
