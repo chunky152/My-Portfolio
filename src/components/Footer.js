@@ -10,7 +10,7 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by MUWANGUZI ALVIN KIGGUNDU</h3>
+          <h3>Designed & Developed by <strong className="cyan">Muwanguzi Alvin Kiggundu</strong></h3>
         </Col>
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} MAK</h3>
@@ -20,7 +20,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://github.com/chunky152"
-                style={{ color: "white" }}
+                className="footer-social-link"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -30,7 +30,7 @@ function Footer() {
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/muwanguzi-alvin-kiggundu/"
-                style={{ color: "white" }}
+                className="footer-social-link"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
