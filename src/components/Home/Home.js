@@ -53,7 +53,7 @@ function Home() {
               Feel free to <span className="cyan">connect </span>with me
             </p>
             <ul className="home-about-social-links">
-              <li className="social-icons">
+              <li className="social-icons" style={{ display: "inline-flex", alignItems: "center" }}>
                 <a
                   href="https://github.com/chunky152"
                   target="_blank"
@@ -62,8 +62,9 @@ function Home() {
                 >
                   <AiFillGithub />
                 </a>
+                <span style={{ marginLeft: "10px", fontWeight: "600", fontSize: "1.2em", color: "black" }}>GitHub</span>
               </li>
-              <li className="social-icons">
+              <li className="social-icons" style={{ display: "inline-flex", alignItems: "center" }}>
                 <a
                   href="https://www.linkedin.com/in/muwanguzi-alvin-kiggundu/"
                   target="_blank"
@@ -72,6 +73,7 @@ function Home() {
                 >
                   <FaLinkedinIn />
                 </a>
+                <span style={{ marginLeft: "10px", fontWeight: "600", fontSize: "1.2em", color: "black" }}>LinkedIn</span>
               </li>
             </ul>
           </Col>

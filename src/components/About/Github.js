@@ -8,7 +8,7 @@ function Github() {
       style={{
         justifyContent: "center",
         paddingBottom: "10px",
-        color: "white",
+        color: "black",
       }}
     >
       <h1 className="project-heading pb-4" style={{ paddingBottom: "20px" }}>
