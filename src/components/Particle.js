@@ -7,6 +7,9 @@ function Particle() {
       id="tsparticles"
       params={{
         particles: {
+          color: {
+            value: "#06b6d4",
+          },
           number: {
             value: 160,
             density: {
@@ -23,13 +26,14 @@ function Particle() {
             speed: 0.05,
           },
           size: {
-            value: 1,
+            value: 3,
           },
           opacity: {
+            value: 0.6,
             anim: {
               enable: true,
               speed: 1,
-              opacity_min: 0.05,
+              opacity_min: 0.2,
             },
           },
         },

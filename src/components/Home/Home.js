@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -27,8 +28,17 @@ function Home() {
                 <strong className="main-name"> MUWANGUZI ALVIN KIGGUNDU</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50, textAlign: "left", paddingBottom: 20 }}>
                 <Type />
+              </div>
+
+              <div style={{ paddingLeft: 50, textAlign: "left", display: "flex", gap: "15px", flexWrap: "wrap" }}>
+                <Button as={Link} to="/project" style={{ padding: "10px 24px", fontWeight: "600", backgroundColor: "#06b6d4", borderColor: "#06b6d4" }}>
+                  View Projects
+                </Button>
+                <Button as={Link} to="/resume" variant="outline-dark" style={{ padding: "10px 24px", fontWeight: "600" }}>
+                  View Resume
+                </Button>
               </div>
             </Col>
 
@@ -36,7 +46,7 @@ function Home() {
               <img
                 src={homeLogo}
                 alt="home pic"
-                className="img-fluid"
+                className="img-fluid home-img"
                 style={{ maxHeight: "450px" }}
               />
             </Col>
