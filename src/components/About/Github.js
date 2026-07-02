@@ -14,13 +14,27 @@ function Github() {
       <h1 className="project-heading pb-4" style={{ paddingBottom: "20px" }}>
         Days I <strong className="cyan">Code</strong>
       </h1>
-      <GitHubCalendar
-        username="chunky152"
-        blockSize={30}
-        blockMargin={10}
-        color="#5cf58d"
-        fontSize={20}
-      />
+      <div 
+        style={{
+          backgroundColor: "rgba(255, 255, 255, 0.7)",
+          backdropFilter: "blur(10px)",
+          border: "1px solid rgba(255, 255, 255, 0.4)",
+          boxShadow: "0 4px 15px rgba(6, 182, 212, 0.15)",
+          borderRadius: "15px",
+          padding: "30px",
+          marginTop: "20px",
+          width: "fit-content",
+          margin: "0 auto"
+        }}
+      >
+        <GitHubCalendar
+          username="chunky152"
+          blockSize={15}
+          blockMargin={5}
+          color="#06b6d4"
+          fontSize={16}
+        />
+      </div>
     </Row>
   );
 }
