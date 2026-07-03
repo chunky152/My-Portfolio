@@ -1,0 +1,14 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  # Keep your npm dependencies patched
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+
+  # Keep the action versions in your workflows current
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
