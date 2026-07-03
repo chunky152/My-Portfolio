@@ -43,6 +43,13 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare Lighthouse static directory
+        run: |
+          mkdir -p ./.lhci-public/My-Portfolio
+          cp -R build/. ./.lhci-public/My-Portfolio/
+          python3 -m http.server 34719 --directory ./.lhci-public > /tmp/lhci-http.log 2>&1 &
+          echo $! > /tmp/lhci-http.pid
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
@@ -54,6 +61,11 @@ jobs:
           configPath: ./lighthouserc.json
           uploadArtifacts: true         # save the report as a workflow artifact
           temporaryPublicStorage: true  # print a shareable report link in the logs
+
+      - name: Stop local server
+        if: always()
+        run: |
+          if [ -f /tmp/lhci-http.pid ]; then kill "$(cat /tmp/lhci-http.pid)" || true; fi
 
   # ---- CD: only deploys on pushes to main (skipped on PRs) ----
   deploy:
