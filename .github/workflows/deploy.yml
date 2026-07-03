@@ -19,39 +19,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # ---- CI: runs on every push AND every pull request ----
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Setup Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 22        
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci               # strict, lockfile-based install for CI
-
-      - name: Lint
-        run: npm run lint --if-present   # no-op if you have no lint script
-
-      - name: Build
-        run: npm run build
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: build             # Create React App outputs to "build"
-
   # ---- Lighthouse audit: performance / accessibility / best-practices / SEO ----
-  # Runs independently of deploy, so a low score reports a failing check
-  # but never blocks the site from shipping.
+  # Runs on every push and PR; builds the app and audits it
+  # A low Lighthouse score reports a failing check but never blocks the site from shipping
   lighthouse:
     runs-on: ubuntu-latest
     steps:
@@ -70,6 +40,14 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build             # Create React App outputs to "build"
+
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
         with:
@@ -79,7 +57,7 @@ jobs:
 
   # ---- CD: only deploys on pushes to main (skipped on PRs) ----
   deploy:
-    needs: build
+    needs: lighthouse
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
