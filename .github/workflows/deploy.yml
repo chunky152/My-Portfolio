@@ -76,14 +76,7 @@ jobs:
         run: |
           cp lighthouserc.json .lighthouserc.json
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            python3 - <<'PY'
-            import json
-            from pathlib import Path
-            path = Path('.lighthouserc.json')
-            data = json.loads(path.read_text())
-            data['ci']['collect']['numberOfRuns'] = 1
-            path.write_text(json.dumps(data, indent=2) + '\n')
-            PY
+            jq '.ci.collect.numberOfRuns = 1' lighthouserc.json > .lighthouserc.json
           fi
 
       - name: Run Lighthouse CI
