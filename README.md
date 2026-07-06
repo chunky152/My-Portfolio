@@ -27,6 +27,10 @@ The site is built to provide an interactive and visually polished representation
 
 Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
 
+### Live Deployment
+
+View the live portfolio at: **[https://chunky152.github.io/My-Portfolio](https://chunky152.github.io/My-Portfolio)**
+
 ## 🛠 Installation and Setup Instructions
 
 1. Installation: `npm install`
@@ -41,6 +45,26 @@ The page will reload if you make edits.
 
 Open the project folder and navigate to `/src/components/`. <br/>
 You will find all the components used, and you can edit your information accordingly.
+
+## 🚀 CI/CD & Deployment
+
+This project uses **GitHub Actions** for automated continuous integration and deployment:
+
+- **Workflow:** [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+- **Build & Test:** Runs on every push and pull request
+- **Lighthouse CI:** Performance, Accessibility, Best Practices, and SEO audits
+- **GitHub Pages:** Automatic deployment to [https://chunky152.github.io/My-Portfolio](https://chunky152.github.io/My-Portfolio) on main branch pushes
+
+### Lighthouse CI Auditing
+
+The site is continuously audited using [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) with the following thresholds:
+
+- **Performance:** warn at < 90%
+- **Accessibility:** error at < 90%
+- **Best Practices:** warn at < 90%
+- **SEO:** warn at < 90%
+
+View audit reports in GitHub Actions workflow runs.
 
 ### Show your support
 
