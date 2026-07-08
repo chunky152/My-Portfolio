@@ -44,7 +44,7 @@ jobs:
       # Only run Lighthouse on PRs — main doesn't need re-auditing
       - name: Configure Pages
         if: github.event_name == 'pull_request'
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Serve build for Lighthouse
         if: github.event_name == 'pull_request'
