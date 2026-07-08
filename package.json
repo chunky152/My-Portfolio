@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "/My-Portfolio",
   "dependencies": {
-    "@react-pdf/renderer": "^2.2.0",
+    "@react-pdf/renderer": "^4.5.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^14.6.1",
