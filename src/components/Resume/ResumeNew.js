@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/Muwanguzi Alvin Kiggundu Resume.pdf";
-import { AiOutlineDownload } from "react-icons/ai";
+import pdf from "../../Assets/Muwanguzi Alvin Kiggundu_CV.pdf"
+import { AiOutlineDownload } from "react-icons/ai"
 
 function ResumeNew() {
   return (
