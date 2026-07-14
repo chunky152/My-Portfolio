@@ -331,6 +331,22 @@ button:focus {
 .myAvtar img {
   border-radius: 25px;
   box-shadow: inset 0 0 10px rgba(6, 182, 212, 0.5), 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: avatar-bounce 3s ease-in-out infinite;
+}
+
+@keyframes avatar-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .myAvtar img {
+    animation: none;
+  }
 }
 
 @media (max-width: 767px) {
