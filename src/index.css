@@ -1,6 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); */
-
-@import url("https://fonts.googleapis.com/css2?family=Outfit&family=PT+Mono&display=swap");
+/* Fonts are loaded from index.html so the browser discovers them
+   immediately instead of after the CSS bundle is parsed */
 
 body {
   margin: 0;
