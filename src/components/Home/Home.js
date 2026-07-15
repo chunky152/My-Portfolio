@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import homeLogo from "../../Assets/home-main.svg";
+import homeLogo from "../../Assets/home-main.webp";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
