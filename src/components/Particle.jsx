@@ -1,6 +1,6 @@
-import React, { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
+import React from "react";
+import Particles, { ParticlesProvider } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const options = {
   fullScreen: { enable: false },
@@ -14,7 +14,6 @@ const options = {
       value: 80,
       density: {
         enable: true,
-        area: 1500,
       },
     },
     links: {
@@ -29,11 +28,10 @@ const options = {
       value: 3,
     },
     opacity: {
-      value: 0.6,
+      value: { min: 0.2, max: 0.6 },
       animation: {
         enable: true,
         speed: 1,
-        minimumValue: 0.2,
         sync: false,
       },
     },
@@ -55,11 +53,11 @@ const options = {
 };
 
 function Particle() {
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
-  }, []);
-
-  return <Particles id="tsparticles" init={particlesInit} options={options} />;
+  return (
+    <ParticlesProvider init={loadSlim}>
+      <Particles id="tsparticles" options={options} />
+    </ParticlesProvider>
+  );
 }
 
 export default Particle;
