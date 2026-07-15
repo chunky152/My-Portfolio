@@ -7,10 +7,16 @@
   <meta name="theme-color" content="#000000" />
   <title>Muwanguzi Alvin Kiggundu | Portfolio</title>
   <meta name="description" content="Self Developed Portfolio website build with React.js">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="%BASE_URL%manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=optional" rel="stylesheet">
+  <!-- Loaded async: with display=optional a late font never swaps in,
+       so this must not block first paint -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=optional" rel="stylesheet"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=optional" rel="stylesheet">
+  </noscript>
 </head>
 
 <body>

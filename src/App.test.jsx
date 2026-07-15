@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { vi } from 'vitest';
 import App from './App';
 
@@ -20,7 +21,11 @@ vi.mock('@tsparticles/slim', () => ({
 }));
 
 test('renders learn react link', () => {
-  render(<App />);
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  );
   const linkElement = screen.getByText(/home/i);
   expect(linkElement).toBeInTheDocument();
 });

@@ -1,0 +1,31 @@
+// Subset of Bootstrap 5.3 covering only what this site uses:
+// Container/Row/Col, Button, Card, Navbar, Nav (react-bootstrap) plus
+// the utility classes referenced in the JSX (d-flex, ms-auto, img-fluid, ...).
+// Full bootstrap.min.css was 245 KB; this compiles to a fraction of that.
+
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Layout & content
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+// Components in use
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+
+// Helpers & utility classes
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";
