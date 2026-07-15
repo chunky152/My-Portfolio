@@ -23,9 +23,15 @@ function App() {
 
   useEffect(() => {
     if (!load) return;
-    const onLoad = () => updateLoad(false);
-    window.addEventListener("load", onLoad);
-    return () => window.removeEventListener("load", onLoad);
+    // Dismiss on window load, but cap the wait so slow connections
+    // aren't stuck staring at the preloader (hurts FCP/LCP)
+    const onDone = () => updateLoad(false);
+    const cap = setTimeout(onDone, 1500);
+    window.addEventListener("load", onDone);
+    return () => {
+      clearTimeout(cap);
+      window.removeEventListener("load", onDone);
+    };
   }, [load]);
 
   return (
