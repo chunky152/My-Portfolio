@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import App from './App';
 
-jest.mock('react-tsparticles', () => {
-  const React = require('react');
+vi.mock('react-tsparticles', async () => {
+  const React = await import('react');
   const Particles = ({ id }) => React.createElement('div', { id }, null);
   return {
     __esModule: true,
@@ -11,9 +12,9 @@ jest.mock('react-tsparticles', () => {
   };
 });
 
-jest.mock('tsparticles-slim', () => ({
+vi.mock('tsparticles-slim', () => ({
   __esModule: true,
-  loadSlim: jest.fn(() => Promise.resolve()),
+  loadSlim: vi.fn(() => Promise.resolve()),
 }));
 
 test('renders learn react link', () => {
