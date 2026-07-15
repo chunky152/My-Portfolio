@@ -3,12 +3,18 @@ import App from './App';
 
 jest.mock('react-tsparticles', () => {
   const React = require('react');
+  const Particles = ({ id }) => React.createElement('div', { id }, null);
   return {
     __esModule: true,
-    default: (props) => React.createElement('div', props, null),
-    Particles: (props) => React.createElement('div', props, null),
+    default: Particles,
+    Particles,
   };
 });
+
+jest.mock('tsparticles-slim', () => ({
+  __esModule: true,
+  loadSlim: jest.fn(() => Promise.resolve()),
+}));
 
 test('renders learn react link', () => {
   render(<App />);
