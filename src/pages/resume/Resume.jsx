@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Particle from "../Particle";
-import pdf from "../../Assets/Muwanguzi Alvin Kiggundu_CV.pdf"
+import Particle from "../../components/Particle";
+import pdf from "../../assets/docs/Muwanguzi Alvin Kiggundu_CV.pdf"
 import { AiOutlineDownload } from "react-icons/ai"
 
-function ResumeNew() {
+function Resume() {
   return (
     <div>
       <Container fluid className="resume-section">
@@ -26,4 +26,4 @@ function ResumeNew() {
   );
 }
 
-export default ResumeNew;
+export default Resume;

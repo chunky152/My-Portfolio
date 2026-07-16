@@ -2,7 +2,7 @@ import React from "react";
 import { renderToPipeableStream } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
 import { PassThrough } from "node:stream";
-import App from "./App";
+import App from "../app/App";
 
 // Must match the client's basename in index.jsx, or every Link href
 // differs between server and client HTML and hydration falls back to

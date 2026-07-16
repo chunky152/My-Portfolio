@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir build-ssr && node scripts/prerender.mjs",
+    "build": "vite build && vite build --ssr src/entries/server.jsx --outDir build-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"

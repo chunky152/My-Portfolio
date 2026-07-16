@@ -1,9 +1,9 @@
 import React from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import "../styles/index.css";
+import App from "../app/App";
+import reportWebVitals from "../lib/reportWebVitals";
 
 // Deployed under /My-Portfolio/ on GitHub Pages; BASE_URL is "/" in dev
 const basename = import.meta.env.BASE_URL.replace(/\/$/, "");

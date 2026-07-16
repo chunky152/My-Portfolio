@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
-import Github from "./Github";
+import Particle from "../../components/Particle";
+import GithubCalendar from "./GithubCalendar";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.webp";
+import laptopImg from "../../assets/images/about.webp";
 import Toolstack from "./Toolstack";
 
 function About() {
@@ -53,7 +53,7 @@ function About() {
           </h1>
           <Toolstack />
 
-          <Github />
+          <GithubCalendar />
         </Container>
       </Container>
     </>

@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import homeLogo from "../../Assets/home-main.webp";
-import Particle from "../Particle";
-import Home2 from "./Home2";
-import Type from "./Type";
+import homeLogo from "../../assets/images/home-main.webp";
+import Particle from "../../components/Particle";
+import Introduction from "./Introduction";
+import Typewriter from "./Typewriter";
 import {AiFillGithub} from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -29,7 +29,7 @@ function Home() {
               </h1>
 
               <div style={{ padding: 50, textAlign: "left", paddingBottom: 20 }}>
-                <Type />
+                <Typewriter />
               </div>
 
               <div style={{ paddingLeft: 50, textAlign: "left", display: "flex", gap: "15px", flexWrap: "wrap" }}>
@@ -55,7 +55,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <Home2 />
+      <Introduction />
 
       <Container>
         <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>

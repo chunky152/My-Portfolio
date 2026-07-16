@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import bitsOfCode from "../../Assets/Projects/Askmak.png";
+import ProjectCard from "./ProjectCard";
+import Particle from "../../components/Particle";
+import bitsOfCode from "../../assets/projects/Askmak.png";
 
 function Projects() {
   return (

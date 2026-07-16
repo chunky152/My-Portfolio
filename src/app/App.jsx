@@ -1,17 +1,17 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
-import Preloader from "../src/components/Pre";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home/Home";
-import Footer from "./components/Footer";
+import Preloader from "../components/Preloader";
+import Navbar from "../components/Navbar";
+import Home from "../pages/home/Home";
+import Footer from "../components/Footer";
 import { Route, Routes, Navigate } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
-import "./style.css";
-import "./App.css";
-import "./bootstrap.scss";
+import ScrollToTop from "../components/ScrollToTop";
+import "../styles/global.css";
+import "../styles/App.css";
+import "../styles/bootstrap.scss";
 
-const About = lazy(() => import("./components/About/About"));
-const Projects = lazy(() => import("./components/Projects/Projects"));
-const Resume = lazy(() => import("./components/Resume/ResumeNew"));
+const About = lazy(() => import("../pages/about/About"));
+const Projects = lazy(() => import("../pages/projects/Projects"));
+const Resume = lazy(() => import("../pages/resume/Resume"));
 
 // The router lives in the entry points: BrowserRouter in index.jsx,
 // StaticRouter in entry-server.jsx for build-time prerendering.

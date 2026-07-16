@@ -8,8 +8,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ssrDir = resolve(root, "build-ssr");
 
-const entryFile = readdirSync(ssrDir).find((f) => /^entry-server\.(m?js)$/.test(f));
-if (!entryFile) throw new Error("SSR bundle not found in build-ssr/");
+const entryFile = readdirSync(ssrDir).find((f) => /^server\.(m?js)$/.test(f));
+if (!entryFile) throw new Error("SSR bundle (server.mjs) not found in build-ssr/");
 const { render } = await import(pathToFileURL(resolve(ssrDir, entryFile)).href);
 
 const routes = {

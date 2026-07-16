@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/my-photo.webp";
+import myImg from "../../assets/images/my-photo.webp";
 import Tilt from "react-parallax-tilt";
 
-function Home2() {
+function Introduction() {
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -63,4 +63,4 @@ function Home2() {
     </Container>
   );
 }
-export default Home2;
+export default Introduction;
