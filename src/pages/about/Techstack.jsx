@@ -1,17 +1,17 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import Kubernates from "../../Assets/TechIcons/Kubernates.svg";
-import Docker from "../../Assets/TechIcons/Docker.svg";
-import GCP from "../../Assets/TechIcons/Google Cloud.svg";
-import Linux from "../../Assets/TechIcons/Linux.svg";
-import Go from "../../Assets/TechIcons/go.svg";
-import Python from "../../Assets/TechIcons/Python.svg";
-import Kafka from "../../Assets/TechIcons/Kafka.svg";
-import SQL from "../../Assets/TechIcons/SQL.svg";
-import Redis from "../../Assets/TechIcons/Redis.svg";
-import Node from "../../Assets/TechIcons/Node.svg";
-import Typescript from "../../Assets/TechIcons/Typescript.svg";
-import Git from "../../Assets/TechIcons/Git.svg";
+import Kubernates from "../../assets/tech-icons/Kubernates.svg";
+import Docker from "../../assets/tech-icons/Docker.svg";
+import GCP from "../../assets/tech-icons/Google Cloud.svg";
+import Linux from "../../assets/tech-icons/Linux.svg";
+import Go from "../../assets/tech-icons/go.svg";
+import Python from "../../assets/tech-icons/Python.svg";
+import Kafka from "../../assets/tech-icons/Kafka.svg";
+import SQL from "../../assets/tech-icons/SQL.svg";
+import Redis from "../../assets/tech-icons/Redis.svg";
+import Node from "../../assets/tech-icons/Node.svg";
+import Typescript from "../../assets/tech-icons/Typescript.svg";
+import Git from "../../assets/tech-icons/Git.svg";
 
 function Techstack() {
   return (

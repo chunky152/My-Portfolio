@@ -2,7 +2,7 @@ import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
 
-function Github() {
+function GithubCalendar() {
   return (
     <Row
       style={{
@@ -39,4 +39,4 @@ function Github() {
   );
 }
 
-export default Github;
+export default GithubCalendar;

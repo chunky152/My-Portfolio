@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entries/server.jsx --outDir build-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
@@ -30,6 +30,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^6.0.3",
     "jsdom": "^29.1.1",
+    "sass": "^1.101.0",
     "vite": "^8.1.4",
     "vitest": "^4.1.10"
   }

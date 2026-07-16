@@ -1,8 +1,8 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import vsCode from "../../Assets/TechIcons/vscode.svg";
-import postman from "../../Assets/TechIcons/Postman.svg";
-import macos from "../../Assets/TechIcons/Apple MacOSX.svg";
+import vsCode from "../../assets/tech-icons/vscode.svg";
+import postman from "../../assets/tech-icons/Postman.svg";
+import macos from "../../assets/tech-icons/Apple MacOSX.svg";
 
 function Toolstack() {
   return (
