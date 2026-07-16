@@ -14,7 +14,7 @@
     "react-parallax-tilt": "^1.7.42",
     "react-router-dom": "^6.2.2",
     "typewriter-effect": "^2.18.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^5.3.0"
   },
   "scripts": {
     "start": "vite",
